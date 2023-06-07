@@ -1,0 +1,216 @@
+@font-face {
+    font-family: "Inter Bold";
+    src: url("./assets/fonts/Inter-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Inter Regular";
+    src: url("./assets/fonts/Inter-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Inter Medium";
+    src: url("./assets/fonts/Inter-Medium.ttf");
+    font-weight: 500;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    background-color: #0B1120;
+    font-family: "Inter Regular", Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+/* general */
+
+.a-blue {
+    color: #2f68f8;
+}
+
+.a-red {
+    color: #f82f2f;
+}
+
+.a-greener {
+    color: #2ff8ab;
+}
+
+.a-green {
+    color: #6fcf97;
+}
+
+.bold {
+    font-family: "Inter Bold", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    height: 65px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #252939;
+    padding: 5px 0px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+}
+
+.hStudied {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+.hStudied ul {
+    list-style: none;
+    letter-spacing: 1px;
+}
+
+/* Content */
+
+.content {
+    width: 90%;
+    padding: 5%;
+    height: 60vh;
+}
+
+.timer {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.spotify {
+    width: 30%;
+    height: 100%;
+    display: flex;
+}
+
+.timer .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border: 3px solid #2f68f8; 
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.timer .options ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    
+}
+
+.timer .options ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2vh;
+}
+
+.timer .options ul li:hover {
+    background-color: #2f68f8;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.timer .options ul li:first-child:hover {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.timer .options ul li:last-child:hover {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.optionSelected {
+    background-color: #2f68f8;
+    transition: all .10s;
+}
+
+.optionSelected:first-child {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.optionSelected:last-child {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5vh 0vh 0 0;
+    background-color: #171c27;
+    width: 60%;
+    height: 50vh;
+    border-radius: 10px;
+    padding: 2vh;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171c27;
+    height: 60%;
+    width: 80%;
+}
+
+.startButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 50%;
+    background-color: #171c27;
+}
+
+.time h2 {
+    background-color: #171c27;
+    border: 2px solid #252939;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+    border-radius: 10px;
+    font-size: 10vh;
+}
+
+.startButton button {
+    padding: 2vh 10vh;
+    border-radius: 10px;
+}
+
+.startButton button:hover {
+    cursor: pointer;
+}
+
+.timer_red {
+    border: 3px solid #f82f2f42 !important;
+    background-color: #f82f2f17 !important;
+}
+
+.timer_green {
+    border: 3px solid #2ff8ab52 !important;
+
+    background-color: #2ff8ab23 !important;
+}
