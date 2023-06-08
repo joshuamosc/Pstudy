@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 export const useChrono = ( time ) => {
     
-    const divs = time.split(':', 2)
+    const divs = time.split(':', 2) //24:00
     
     divs.map( (div, i) => {
         divs[i] = parseInt(div)
@@ -15,16 +15,18 @@ export const useChrono = ( time ) => {
     const [ seconds, setSeconds ] = useState( divs[1] )
     
     useEffect( () => {
+        console.log(seconds);
         if ( seconds === 0 ) {
             setSeconds(59)
-            console.log(seconds);
             setMinutes( minutes - 1 )
         }
-        setInterval( () => { 
-            console.log(seconds);
+        const interval = setInterval( () => { 
             setSeconds( seconds - 1 )
         }, 1000 )
-    }, [seconds])
+        return () => {
+            clearInterval(interval)
+        }
+    }, [seconds, minutes])
 
 
         

@@ -1,9 +1,6 @@
 
 export const Header = ( { storage } ) => {
-
-  console.log(localStorage)
-  console.log(storage)
-
+  
   return (
     <header>
       <div className="logo"> 

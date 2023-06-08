@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {useGetLocalStorage} from '../hooks/useGetLocalStorage' 
 import { useChrono } from '../hooks/useChrono';
 
@@ -15,14 +15,20 @@ export const Content = ( { storage } ) => {
     // Chronometer
     //const [ time, setTime ] = useState('00:00')
 
-    /*let time;
-    if ( studySet ) {
+    let time;
+    if ( studySet ) {   
         time = localStorage.set
     } else if ( shortBreak ) {
         time = localStorage.shortBreak 
     } else if ( longBreak ) {
         time = localStorage.longBreak 
-    } */
+    } 
+
+    useEffect(() => {
+        console.log(localStorage.getItem('set'));
+        console.log(storage)
+    }, [])
+
     const [ minutes, seconds ] = useChrono( storage.set ) 
 
     const handleStudySet = () => {
